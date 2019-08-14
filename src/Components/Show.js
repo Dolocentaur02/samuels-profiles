@@ -1,22 +1,22 @@
 import React, {Component} from 'react';
-
-import "./Show.css"
+// import "./Show.css"
 
 
 class Show extends Component {
 
     render() {
-        var profiles = this.props.profiles.filter((item) =>
-        item.name === this.props.match.params.profiles
-        )
-        console.log(profiles)
+        var profile = this.props.profiles.find(profile => {
+            return profile.name === this. props.match.params.name
+
+        })
+       
+
         return(
             <div>
-                <img src={profiles[0].image}></img>
-                <h1>{profiles[0].name}</h1>
-                <h2>{profiles[0].genus}</h2>
-                <h3>{profiles[0].role}</h3>
-                <a href={profiles[0].homepage}><input type="button" value="Read more"></input></a>
+                <img src={profile.image}></img>
+                <h1>{profile.name}</h1>
+                <p>{profile.role}</p>
+                <a href={profile.homepage}><input type="button" value="Read more"></input></a>
 
             </div>
         );

@@ -5,23 +5,23 @@ class Home extends Component {
 
     render() {
 
-        let profile = this.props.profiles.map(
-            item => {
-                console.log(item)
-                let url = `show/${item.name}`
-                return (
-                    <Link to={url}><img key={item.name} src={item.image} ></img>
-                    </Link>
-                )
-            }
-        )
-
         return (
             <div>
-                {profile}
+                {this.props.profiles.map((profile, index) => {
+                    return (
+                        <Link to="/show/:name" >
+                            <img key={index} src={profile.image} ></img>
+                        </Link>
+
+                    )
+
+                })}
             </div>
-        );
+
+        )
     }
+
+
 }
 
 export default Home;

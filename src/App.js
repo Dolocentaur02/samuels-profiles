@@ -103,8 +103,8 @@ class App extends Component {
       <div>
         <div className="title">Project_2_Plus</div>
         <Link to="/">Home</Link>
-        <Route exact path="/" render={routerProps => (<Home {...this.state} {...routerProps} />)}></Route>
-      <Route path="/show/:name" render={routerProps => (<Show {...this.state}  {...routerProps} />)}></Route>
+        <Route exact path="/" render={routerProps => (<Home {...this.state} {...routerProps} />)}/>
+        <Route path="/show/:name" render={routerProps => (<Show {...this.state}  {...routerProps} />)} />
       </div >
     );
   }
