@@ -102,15 +102,11 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div className="App"><Link to="/">
-          <h1 className="title">Project_2_Plus</h1>
+        <div className="title">Project_2_Plus</div>
+        <Link to="/">Home
         </Link>
-          <Link to="/show/:name"></Link>
-        </div>
-        <div>
-          <Route path="/" exact render={() => <Home profiles={this.state.profiles} />} />
-          <Route path="/show/:name" exact render={props => <Show {...props} {...this.state} />} />
-        </div>
+        <Route path="/" exact render={() => <Home profiles={this.state.profiles} />} />
+        <Route path="/show/:name" exact render={props => <Show {...props} {...this.state} />} />
       </div>
     );
   }
