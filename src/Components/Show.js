@@ -1,4 +1,5 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
+
 import "./Show.css"
 
 
@@ -13,8 +14,8 @@ class Show extends Component {
             <div>
                 <img src={profiles[0].image}></img>
                 <h1>{profiles[0].name}</h1>
-                <h1>{profiles[0].genus}</h1>
-                <h1>{profiles[0].role}</h1>
+                <h2>{profiles[0].genus}</h2>
+                <h3>{profiles[0].role}</h3>
                 <a href={profiles[0].homepage}><input type="button" value="Read more"></input></a>
 
             </div>

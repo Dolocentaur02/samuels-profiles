@@ -91,7 +91,6 @@ class App extends Component {
           "image": "https://vignette.wikia.nocookie.net/harrypotter/images/b/b7/Harry-potter-goblet-of-fire-hannah.jpg/revision/latest?cb=20170731215859",
           "homepage": "https://harrypotter.fandom.com/wiki/Katie_Bell"
 
-
         }
 
       ]
@@ -103,11 +102,10 @@ class App extends Component {
     return (
       <div>
         <div className="title">Project_2_Plus</div>
-        <Link to="/">Home
-        </Link>
-        <Route path="/" exact render={() => <Home profiles={this.state.profiles} />} />
-        <Route path="/show/:name" exact render={props => <Show {...props} {...this.state} />} />
-      </div>
+        <Link to="/">Home</Link>
+        <Route exact path="/" render={routerProps => (<Home {...this.state} {...routerProps} />)}></Route>
+      <Route path="/show/:name" render={routerProps => (<Show {...this.state}  {...routerProps} />)}></Route>
+      </div >
     );
   }
 }

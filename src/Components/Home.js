@@ -5,7 +5,7 @@ class Home extends Component {
 
     render() {
 
-        let list = this.props.profiles.map(
+        let profile = this.props.profiles.map(
             item => {
                 console.log(item)
                 let url = `show/${item.name}`
@@ -18,7 +18,7 @@ class Home extends Component {
 
         return (
             <div>
-                {list}
+                {profile}
             </div>
         );
     }
