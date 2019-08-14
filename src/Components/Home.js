@@ -8,8 +8,9 @@ class Home extends Component {
         let list = this.props.profiles.map(
             item => {
                 console.log(item)
+                let url = `show/${item.name}`
                 return (
-                    <Link to={"/show" + item.name} ><img key={item.name} src={item.image} ></img>
+                    <Link to={url}><img key={item.name} src={item.image} ></img>
                     </Link>
                 )
             }

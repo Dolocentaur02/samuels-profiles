@@ -20,7 +20,8 @@ const profiles = [
     "deathEater": false,
     "bloodStatus": "half-blood",
     "species": "human",
-    "image": "https://vignette.wikia.nocookie.net/harrypotter/images/5/52/Katiebellinfobox.jpg/revision/latest?cb=20170118053940"
+    "image": "https://vignette.wikia.nocookie.net/harrypotter/images/5/52/Katiebellinfobox.jpg/revision/latest?cb=20170118053940",
+    "homepage": "https://harrypotter.fandom.com/wiki/Hannah_Abbott"
   },
   {
     "_id": "5a0fa54aae5bc100213c232f",
@@ -34,7 +35,8 @@ const profiles = [
     "deathEater": false,
     "bloodStatus": "unknown",
     "species": "human",
-    "image": "https://vignette.wikia.nocookie.net/harrypotter/images/7/7c/Bagshot_profile.jpg/revision/latest?cb=20161119223158"
+    "image": "https://vignette.wikia.nocookie.net/harrypotter/images/7/7c/Bagshot_profile.jpg/revision/latest?cb=20161119223158",
+    "homepage": "https://harrypotter.fandom.com/wiki/Bathsheda_Babbling"
 
   },
   {
@@ -48,7 +50,8 @@ const profiles = [
     "deathEater": false,
     "bloodStatus": "unknown",
     "species": "human",
-    "image": "https://vignette.wikia.nocookie.net/harrypotter/images/7/71/LudoBagman.png/revision/latest?cb=20180205035926"
+    "image": "https://vignette.wikia.nocookie.net/harrypotter/images/7/71/LudoBagman.png/revision/latest?cb=20180205035926",
+    "homepage": "https://harrypotter.fandom.com/wiki/Ludovic_Bagman"
 
   },
   {
@@ -62,7 +65,8 @@ const profiles = [
     "deathEater": false,
     "bloodStatus": "unknown",
     "species": "human",
-    "image": "https://vignette.wikia.nocookie.net/harrypotter/images/2/21/ProfessorFemale.jpg/revision/latest?cb=20100824181133"
+    "image": "https://vignette.wikia.nocookie.net/harrypotter/images/2/21/ProfessorFemale.jpg/revision/latest?cb=20100824181133",
+    "homepage": "https://harrypotter.fandom.com/wiki/Bathilda_Bagshot"
 
   },
   {
@@ -79,7 +83,9 @@ const profiles = [
     "deathEater": false,
     "bloodStatus": "pure-blood",
     "species": "human",
-    "image": "https://vignette.wikia.nocookie.net/harrypotter/images/b/b7/Harry-potter-goblet-of-fire-hannah.jpg/revision/latest?cb=20170731215859"
+    "image": "https://vignette.wikia.nocookie.net/harrypotter/images/b/b7/Harry-potter-goblet-of-fire-hannah.jpg/revision/latest?cb=20170731215859",
+    "homepage": "https://harrypotter.fandom.com/wiki/Katie_Bell"
+
 
   }
 
@@ -103,7 +109,7 @@ class App extends Component {
         </div>
         <div>
           <Route path="/" exact render={() => <Home profiles={this.state.profiles} />} />
-          <Route path='/show/:name' exact render={routerProps => <Show {...routerProps} {...this.state} />} />
+          <Route path="/show/:name" exact render={props => <Show {...props} {...this.state} />} />
         </div>
       </div>
     );

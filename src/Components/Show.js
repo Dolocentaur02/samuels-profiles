@@ -1,10 +1,8 @@
 import React, {Component} from 'react'
-// import "./Show.css"
+import "./Show.css"
 
 
 class Show extends Component {
-
-
 
     render() {
         var profiles = this.props.profiles.filter((item) =>
