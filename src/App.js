@@ -2,6 +2,12 @@ import React, { Component } from 'react';
 import { Route, Link } from "react-router-dom"
 import Home from "./Components/Home"
 import Show from "./Components/Show"
+import Create from './Components/Create'
+// import Update from './Components/Update'
+// import Delete from './Components/Delete'
+
+
+
 import './App.css';
 
 // this profile is birds in other instances nah mean
@@ -101,10 +107,23 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div className="title">Project_2_Plus</div>
+        <nav>
+        <h1>Harry Porter Profiles</h1>
+        <div className="title"></div>
+        <span>                   </span>
         <Link to="/">Home</Link>
-        <Route exact path="/" render={routerProps => (<Home {...this.state} {...routerProps} />)}/>
+        <span>                    </span>
+        <Link to="/show/:name" >Show</Link>
+        <span>  </span>
+        <Link to="/create/:name" >Create Profile</Link>
+        <span>                     </span>
+        <Link to="/show/:name" >Update Profile</Link>
+        <span>                     </span>
+        <Link to="/show/:name" >Delete Profile</Link>
+        <Route exact path="/" render={routerProps => (<Home {...this.state} {...routerProps} />)} />
         <Route path="/show/:name" render={routerProps => (<Show {...this.state}  {...routerProps} />)} />
+        <Route path="/create/:name" exact render={routerProps => (<Create {...this.state}  {...routerProps} />)} />
+        </nav>
       </div >
     );
   }

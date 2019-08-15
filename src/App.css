@@ -1,5 +1,6 @@
 .App {
-  text-align: center;
+  text-align: Left ;
+ 
 }
 
 /* .App-logo {
@@ -35,7 +36,32 @@
 img{
   height: 200px;
   width: 150px;
+  opacity: 0.4;
+  transform: scaleX(-1);
 }
 body{
   text-align: center;
+  text-decoration: none;
+  background: url("http://getwallpapers.com/wallpaper/full/9/4/0/17379.jpg");
+
+}
+
+h1{
+
+  background-color:rgba(75, 78, 78, 0.1);
+  color: white;
+  padding: 50px;
+  height: 30px;
+  
+}
+
+
+.title {
+  text-align: left;
+  font-size: 20px;
+  color:white;
+  height: 15px;
+  padding: 20px;
+  
+
 }
