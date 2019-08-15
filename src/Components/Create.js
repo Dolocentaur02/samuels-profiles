@@ -1,16 +1,22 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import axios from 'axios';
 import "./Create.css"
 
 class Create extends Component {
     constructor() {
         super()
         this.state = {
-            name: " ",
-            orderOfThePhoenix: " ",
-            bloodStatus: " ",
-            species: " ",
-            image: " ",
-            homePage: " "
+
+            form: [
+                {
+                name: " ",
+                orderOfThePhoenix: " ",
+                bloodStatus: " ",
+                species: " ",
+                image: " ",
+                homePage: " "
+            }
+            ]
 
         }
     }
@@ -62,8 +68,26 @@ class Create extends Component {
             species: this.state.species,
             image: this.state.image,
             homePage: this.state.homePage
-        }
+        };
+        let names = this.props.match.params.name
+        console.log(names)
+        axios.post(`http://localhost:4000/profile/`, {
+            name: names
+        })
+        .then(res => {
+            this.setState({ form: [res.data] })
+            console.log(res.data)
+        })
+
+
     }
+
+
+    // componentDidMount() {
+    //     let names = this.props.match.params.name
+    //     console.log(names)
+    // }
+
 
     render() {
         return (
@@ -95,7 +119,7 @@ class Create extends Component {
                         <input type="text" className="createForm" value={this.state.homePage} onChange={this.onChangePage} />
                     </div>
                     <div className="form-group">
-                        <input type="submit" value=" New Profile" className=" btn"/>
+                        <input type="submit" value=" New Profile" className=" btn" />
                     </div>
                 </form>
             </div>
