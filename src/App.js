@@ -117,9 +117,9 @@ class App extends Component {
         <span>  </span>
         <Link to="/create/:name" >Create Profile</Link>
         <span>                     </span>
-        <Link to="/show/:name" >Update Profile</Link>
+        {/* <Link to="/show/:name" >Update Profile</Link> */}
         <span>                     </span>
-        <Link to="/show/:name" >Delete Profile</Link>
+        {/* <Link to="/show/:name" >Delete Profile</Link> */}
         <Route exact path="/" render={routerProps => (<Home {...this.state} {...routerProps} />)} />
         <Route path="/show/:name" render={routerProps => (<Show {...this.state}  {...routerProps} />)} />
         <Route path="/create/:name" exact render={routerProps => (<Create {...this.state}  {...routerProps} />)} />

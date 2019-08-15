@@ -10,7 +10,7 @@ class Home extends Component {
             <div className="picContainer">
                 {this.props.profiles.map((profile, index) => {
                     return (
-                        <Link to="/show/:name" >
+                        <Link key = {index} to={`/show/${profile._id}`} >
                             <img key={index} src={profile.image} ></img>
                         </Link>
 
